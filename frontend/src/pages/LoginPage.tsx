@@ -126,12 +126,46 @@ const LoginPage = () => {
                     <div className="branding-glass">
                         <div className="bee-icon">
                             {/* Abstract Technical Bee Representation */}
-                            <svg width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M50 15L85 35V65L50 85L15 65V35L50 15Z" stroke="#121212" strokeWidth="6" strokeLinejoin="round" />
-                                <path d="M25 40L50 55L75 40" stroke="#121212" strokeWidth="6" strokeLinejoin="round" />
-                                <path d="M50 55V85" stroke="#121212" strokeWidth="6" strokeLinejoin="round" />
-                                <circle cx="50" cy="50" r="10" fill="#121212" />
-                                <path d="M50 25C40 10 20 10 15 25C10 40 30 50 50 50C70 50 90 40 85 25C80 10 60 10 50 25Z" fill="#121212" fillOpacity="0.2" />
+                            <svg width="220" height="220" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <clipPath id="loginAbdomenClip">
+                                    <path d="M 80 105 Q 60 140 100 185 Q 140 140 120 105 Z" />
+                                </clipPath>
+                                <g stroke="#000" strokeWidth="6" strokeLinejoin="round" strokeLinecap="round" fill="none">
+                                    <path d="M 116 48 L 160 35 L 190 55 L 170 85 L 126 85" />
+                                    <path d="M 116 68 L 190 55" />
+                                    <path d="M 170 85 L 164 115 L 124 115 L 112 105" />
+                                    <path d="M 115 95 L 150 105" />
+                                    <path d="M 124 115 L 124 140" />
+                                    <path d="M 84 48 L 40 35 L 10 55 L 30 85 L 74 85" />
+                                    <path d="M 84 68 L 10 55" />
+                                    <path d="M 30 85 L 36 115 L 76 115 L 88 105" />
+                                    <path d="M 85 95 L 50 105" />
+                                    <path d="M 76 115 L 76 140" />
+                                </g>
+                                <g stroke="#000" strokeWidth="6" fill="#F4B400">
+                                    <circle cx="153" cy="61.5" r="5" />
+                                    <circle cx="190" cy="55" r="5" />
+                                    <circle cx="150" cy="105" r="5" />
+                                    <circle cx="124" cy="140" r="5" />
+                                    <circle cx="47" cy="61.5" r="5" />
+                                    <circle cx="10" cy="55" r="5" />
+                                    <circle cx="50" cy="105" r="5" />
+                                    <circle cx="76" cy="140" r="5" />
+                                </g>
+                                <path d="M 92 36 Q 85 15 70 18" stroke="#000" strokeWidth="6" strokeLinecap="round" fill="none" />
+                                <path d="M 108 36 Q 115 15 130 18" stroke="#000" strokeWidth="6" strokeLinecap="round" fill="none" />
+                                <circle cx="70" cy="18" r="5" fill="#F4B400" stroke="#000" strokeWidth="6" />
+                                <circle cx="130" cy="18" r="5" fill="#F4B400" stroke="#000" strokeWidth="6" />
+                                <path d="M 80 105 Q 60 140 100 185 Q 140 140 120 105 Z" fill="#F4B400" />
+                                <rect x="50" y="125" width="100" height="23" fill="#000" clipPath="url(#loginAbdomenClip)" />
+                                <path d="M 80 105 Q 60 140 100 185 Q 140 140 120 105 Z" fill="none" stroke="#000" strokeWidth="6" strokeLinejoin="round" />
+                                <circle cx="100" cy="50" r="22" fill="#000" />
+                                <circle cx="100" cy="85" r="28" fill="#F4B400" stroke="#000" strokeWidth="6" />
+                                <g stroke="#000" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" fill="none">
+                                    <path d="M 88 77 L 79 85 L 88 93" />
+                                    <path d="M 102 96 L 98 74" />
+                                    <path d="M 112 77 L 121 85 L 112 93" />
+                                </g>
                             </svg>
                         </div>
                         <h2 className="branding-title">Master Your Interviews</h2>
