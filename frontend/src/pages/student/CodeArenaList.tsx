@@ -14,11 +14,17 @@ const CodeArenaList: React.FC = () => {
 
   const fetchTests = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/tests');
-      const data = await response.json();
-      if (response.ok) {
-        setTests(data.filter((t: any) => t.test_type === 'code' && t.is_published));
+      const stored = localStorage.getItem('local_tests');
+      const localTests = stored ? JSON.parse(stored) : [];
+
+      const response = await fetch('http://localhost:5000/api/tests').catch(() => null);
+      let apiTests = [];
+      if (response && response.ok) {
+        apiTests = await response.json();
       }
+
+      const allTests = [...localTests, ...apiTests];
+      setTests(allTests.filter((t: any) => t.test_type === 'code' && t.is_published));
     } catch (err) {
       console.error('Error fetching tests:', err);
     } finally {
