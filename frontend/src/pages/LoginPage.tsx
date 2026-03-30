@@ -16,6 +16,34 @@ const LoginPage = () => {
         e.preventDefault();
         console.log('Login attempt with', formData);
         
+        // --- DEVELOPMENT BYPASS ---
+        if (formData.email === 'admin' && formData.password === '1234') {
+            localStorage.setItem('user', JSON.stringify({
+                _id: 1,
+                email: 'admin',
+                role: 'admin',
+                name: 'Admin',
+                profile_image: '',
+                message: 'Login successful'
+            }));
+            navigate('/admin');
+            return;
+        }
+
+        if (formData.email === 'user' && formData.password === '1234') {
+            localStorage.setItem('user', JSON.stringify({
+                _id: 2,
+                email: 'user',
+                role: 'student',
+                name: 'User',
+                profile_image: '',
+                message: 'Login successful'
+            }));
+            navigate('/student');
+            return;
+        }
+        // --------------------------
+
         try {
             const response = await fetch('http://localhost:5000/api/login', {
                 method: 'POST',
@@ -61,10 +89,10 @@ const LoginPage = () => {
 
                         <form onSubmit={handleSubmit} className="login-form">
                             <FormInput
-                                label="Email Address"
+                                label="Username / Email Address"
                                 name="email"
-                                type="email"
-                                placeholder="rollno@gmail.com"
+                                type="text"
+                                placeholder="admin, user, or rollno@gmail.com"
                                 value={formData.email}
                                 onChange={handleChange}
                                 required

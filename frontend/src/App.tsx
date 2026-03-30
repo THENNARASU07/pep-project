@@ -21,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
-        
+
         {/* Student Portal Routes */}
         <Route path="/student" element={<StudentLayout />}>
            <Route index element={<StudentHome />} />
